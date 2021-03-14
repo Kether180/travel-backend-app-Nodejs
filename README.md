@@ -1,4 +1,4 @@
-##  Project : Travel Blog -backend-app
+##  Project : Travel Blog App - Backend 
 
 Responsive Travel Blog Web App project  - Full Stack Development - Hamburg Coding School 
 
