@@ -1,6 +1,6 @@
 ##  Project : Travel Blog App - Backend 
 
-Responsive Travel Blog Web App project  - Full Stack Development - Hamburg Coding School 
+Responsive Travel Blog App Project  - Full Stack Development - Hamburg Coding School 
 
 Backend of [The Travel Blog App](https://github.com/Kether180/Travel-frontend-app).
 
