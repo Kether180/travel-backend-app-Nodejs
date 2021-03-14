@@ -3,7 +3,6 @@
 Responsive Travel Blog Web App project  - Full Stack Development - Hamburg Coding School 
 
 Backend of [The Travel Blog App](https://github.com/Kether180/Travel-frontend-app").
-[The TravelBlog App](https://github.com/Kether180/Travel-frontend-app")
 
 ## Features
 * A list of travel locations,videos and short information about locations.
