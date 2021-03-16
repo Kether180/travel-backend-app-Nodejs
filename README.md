@@ -19,10 +19,6 @@ Backend of [The Travel Blog App](https://github.com/Kether180/Travel-frontend-ap
 * [Google Maps Embed API](https://developers.google.com/maps/documentation/embed/get-started "Google Maps Embed API documentation").
 * [Vue js](https://vuejs.org/").
 
- 
-## Check the project with codeSandbox
-
-https://k8clm.csb.app/
 
 ## About
 
