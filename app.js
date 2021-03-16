@@ -14,7 +14,7 @@ app.use(express.json());
 const locationData = require('./datafolder/locationData');
 
 // Routes
-// GET Locations
+// GET Locations 
 app.get('/locations', (req, res) => {
 	res.status(200).json({
 		code: res.statusCode,
