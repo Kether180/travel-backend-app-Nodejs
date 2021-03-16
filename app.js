@@ -2,6 +2,30 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
 
+// set the view engine to ejs
+app.set('view engine', 'ejs');
+
+
+// set the view engine to ejs
+//app.set('view engine', 'ejs');
+
+// make express look in the public directory for assets (css/js/img)
+// app.use(express.static(__dirname + '/public'));
+
+// set the home page route
+// app.get('/', function(req, res) {
+
+ 
+    // ejs render automatically looks in the views folder
+    // res.render('index');
+//});
+
+//app.listen(port, function() {
+  //  console.log('Our app is running on http://localhost:' + port);
+// });
+
+app.use(express.static(__dirname + '/public'));
+
 app.use((req, res, next) => {
 	res.setHeader('Access-Control-Allow-Origin', '*');
 	res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
@@ -14,8 +38,8 @@ app.use(express.json());
 const locationData = require('./datafolder/locationData');
 
 // Routes
-// GET Locations 
-app.get('/locations', (req, res) => {
+// GET Locations -
+app.get('/', (req, res) => {
 	res.status(200).json({
 		code: res.statusCode,
 		status: 'OK',
