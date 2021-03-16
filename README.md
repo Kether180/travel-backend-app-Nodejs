@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 # travel-backend-app
 
-
-=======
 ##  Project : Travel Blog App - Backend 
 
 Responsive Travel Blog App Project  - Full Stack Development - Hamburg Coding School 
@@ -34,4 +31,4 @@ Mail: conscientia.digitaltech@gmail.com
 GitHub: https://github.com/kether180
 
 Facebook: https://www.facebook.com/conscientia.digitaltech
->>>>>>> ca343dbc307fe61de3a557fb8edfdc8ca431dd6d
+
