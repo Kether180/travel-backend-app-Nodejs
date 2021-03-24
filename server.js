@@ -2,29 +2,6 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
 
-// set the view engine to ejs
-app.set('view engine', 'ejs');
-
-
-// set the view engine to ejs
-//app.set('view engine', 'ejs');
-
-// make express look in the public directory for assets (css/js/img)
-// app.use(express.static(__dirname + '/public'));
-
-// set the home page route
-// app.get('/', function(req, res) {
-
- 
-    // ejs render automatically looks in the views folder
-    // res.render('index');
-//});
-
-//app.listen(port, function() {
-  //  console.log('Our app is running on http://localhost:' + port);
-// });
-
-app.use(express.static(__dirname + '/public'));
 
 app.use((req, res, next) => {
 	res.setHeader('Access-Control-Allow-Origin', '*');
@@ -51,14 +28,14 @@ app.get('/', (req, res) => {
 // GET Location ONE  BY ID
 app.get('/locations/:id', (req, res) => {
 	const paramId = req.params.id;
-	const locationIds = []; // Array will store all locationtIds --->
+	const locationIds = []; 
 
 	//  Handleling data from each location
 	locationData.forEach(location => {
 		locationIds.push(location.id.toString()); 
     // Ids turning into strings and store in array
 
-		// Return spot object when id found
+		// Return location object when id found
 		if (location.id == paramId) {
 			res.status(200).json({
 				code: res.statusCode,
@@ -69,7 +46,7 @@ app.get('/locations/:id', (req, res) => {
 		}
 	});
 
-	// Check if requested spotId exist in spotIds
+	// Check if requested locationId exist in locationIds
 	if (!locationIds.includes(paramId)) {
 		res.status(404).json({
 			code: res.statusCode,
@@ -81,6 +58,27 @@ app.get('/locations/:id', (req, res) => {
 });
 
 // Listen Port
-app.listen(port, () => {
-	console.log(`Server is running & listening on port ${port}`);
+app.listen(process.env.PORT || 3000, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
+
+
+
+// will be use later on for a User Interface for backend
+// set the view engine to ejs
+//app.set('view engine', 'ejs');
+
+// make express look in the public directory for assets (css/js/img)
+// app.use(express.static(__dirname + '/public'));
+
+// set the home page route
+// app.get('/', function(req, res) {
+
+ 
+    // ejs render automatically looks in the views folder
+    // res.render('index');
+//});
+
+//app.listen(port, function() {
+  //  console.log('Our app is running on http://localhost:' + port);
+// });
